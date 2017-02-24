@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="half_transparent">#90000000</color>
+    <color name="TMBlack">#b0000000</color>
+    <color name="division_line">#dbdad8</color>
+    <color name="gray_fontv">#a0a0a0</color>
+    <color name="black_fontv">#3c3c3c</color>
+    <color name="gray_color">#f0f5fa</color>
+    <color name="line_color">#d2dce6</color>
+    <color name="Text_Dresser_Name">#283030</color>
+    <color name="Text_Dresser_Name_Sub">#141e28</color>
+    <color name="Text_Tag">#8c96a0</color>
+    <color name="Text_TIME">#c3c8c8</color>
+    <color name="Text_Title">#465050</color>
+    <color name="Text_Tag_60">#6f8c96a0</color>
+    <color name="text_color_red">#fa6e64</color>
+    <color name="text_alternative">#9ba0a0</color>
+    <color name="divider_color">#d2dcdc</color>
+    <color name="showreel_text_1">#737878</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="lead">#ADB5B5</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff6e64</color>
+    <color name="grey">#808080</color>
+    <color name="forestgreen">#228b22</color>
+    <color name="blue">#0000ff</color>
+    <color name="black">#000000</color>
+
+    <!-- background color for coupon share & fetch page -->
+    <color name="reservation_times">#aab4b4</color>
+
+    <!-- 主题色 -->
+    <color name="theme_red">#fa6e64</color>
+    <color name="theme_white">#f0f5f5</color>
+    <color name="theme_orange">#FFB27D</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- 字体颜色 -->
+    <color name="font_dark">#141e28</color>
+    <color name="font_gray">#8c96a0</color>
+    <color name="font_white">#ffffff</color>
+
+    <color name="font_3a">#3a3a3a</color>
+    <color name="font_9a">#9a9a9a</color>
+    <color name="font_9b">#9b9b9b</color>
+    <color name="font_4c">#4c4c4c</color>
+    <color name="font_b3">#b3b3b3</color>
+    <color name="font_7b">#7B68EE</color>
+    <color name="font_ee">#EE750C</color>
+
+    <color name="font_dimdark">#3a3a3a</color>
+    <color name="font_dimgray">#9a9a9a</color>
+    <color name="font_darkgray">#9b9b9b</color>
+    <color name="font_somber">#4c4c4c</color>
+    <color name="font_light_grey">#b3b3b3</color>
+
+    <!-- material design black font color -->
+    <color name="font_black_2">#616161</color>
+    <color name="font_black_5">#bdbdbd</color>
+    <color name="font_black_6">#e0e0e0</color>
+
+    <!-- 背景色 -->
+    <color name="bg_gray">#BCBFC1</color>
+    <color name="bg_orange">@color/theme_orange</color>
+    <color name="bg_base">#e7eded</color>
+    <color name="bg_no_data">#f5fafa</color>
+
+    <!-- 分割线 -->
+    <color name="divider_line">#d7dcdc</color>
+
+    <!-- 边框 -->
+    <color name="border_normal">#c3c8c8</color>
+
+    <color name="concerned_bg">#f5fafa</color>
+
+    <color name="video_view_update_btn">#4876FF</color>
+
+    <color name="bg_user_values_task">@color/theme_orange</color>
+    <color name="bg_twenty_per_transparent">#33000000</color>
+
+    <color name="multiple_image_select_primaryDark">@color/theme_orange</color>
+
+</resources>

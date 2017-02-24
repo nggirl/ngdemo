@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_search_input"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:paddingLeft="24dp"
+        android:background="@color/white"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:hint="@string/main_search_bar_hint"
+        android:textSize="@dimen/font_small"
+        android:textColor="@color/font_9a"
+        android:textColorHint="@color/font_9a"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:src="@mipmap/icon_search"/>
+
+    <ImageView
+        android:id="@+id/iv_search_edit_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="13dp"
+        android:src="@mipmap/dresser_search_close"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

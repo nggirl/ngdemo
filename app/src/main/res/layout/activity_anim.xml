@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:paddingLeft="@dimen/padding_larger"
+            android:paddingRight="@dimen/padding_larger"
+            android:paddingTop="7dp">
+
+            <include
+                layout="@layout/include_main_search_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_view_anim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_7"
+            android:layout_marginRight="@dimen/dimen_7"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:gravity="center"
+            android:text="@string/btn_view_anim"
+            android:textColor="@color/font_4c"
+            android:textSize="@dimen/font_16" />
+
+        <Button
+            android:id="@+id/btn_view_anim_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_7"
+            android:layout_marginRight="@dimen/dimen_7"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:text="@string/view_anim_play" />
+
+        <cn.com.nggirl.ngdemo.ui.anim.AnimSearchbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <cn.com.nggirl.ngdemo.ui.anim.AnimSearchbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+</FrameLayout>

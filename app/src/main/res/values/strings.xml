@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ngdemo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="btn_view_anim">View Animations</string>
+
+    <string name="main_search_bar_hint">搜索帖子、用户、商品</string>
+
+    <string name="view_anim_play">播放</string>
+</resources>
