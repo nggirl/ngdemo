@@ -14,6 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -51,6 +53,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 final Intent intent = ViewPropertyAnimationActivity.newInstance(MainActivity.this);
+                startActivity(intent);
+            }
+        });
+
+        final View btnPullZoom = findViewById(R.id.btn_pull_zoom);
+        btnPullZoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent = PullZoomRecyclerViewActivity.newInstance(MainActivity.this);
                 startActivity(intent);
             }
         });
