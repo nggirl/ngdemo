@@ -1,4 +1,4 @@
-package cn.com.nggirl.ngdemo.ui.anim;
+package cn.com.nggirl.ngdemo.anim;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;

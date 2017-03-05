@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
+import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

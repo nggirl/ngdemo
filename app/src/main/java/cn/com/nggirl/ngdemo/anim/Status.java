@@ -1,4 +1,4 @@
-package cn.com.nggirl.ngdemo.model;
+package cn.com.nggirl.ngdemo.anim;
 
 public class Status {
     private boolean isRetweet;

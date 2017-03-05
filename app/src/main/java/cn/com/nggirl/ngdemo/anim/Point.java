@@ -1,4 +1,4 @@
-package cn.com.nggirl.ngdemo.ui.anim;
+package cn.com.nggirl.ngdemo.anim;
 
 public class Point {
     private float x;

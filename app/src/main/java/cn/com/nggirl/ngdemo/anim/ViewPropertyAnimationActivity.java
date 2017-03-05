@@ -1,4 +1,4 @@
-package cn.com.nggirl.ngdemo;
+package cn.com.nggirl.ngdemo.anim;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -16,9 +16,8 @@ import android.widget.TextView;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
+import cn.com.nggirl.ngdemo.R;
 import cn.com.nggirl.ngdemo.model.DataServer;
-import cn.com.nggirl.ngdemo.model.Status;
-import cn.com.nggirl.ngdemo.ui.anim.ColorEvaluator;
 
 /**
  * Android属性动画的用法

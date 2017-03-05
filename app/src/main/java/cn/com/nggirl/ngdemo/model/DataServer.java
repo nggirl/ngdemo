@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.com.nggirl.ngdemo.pullzoom.MultiStatus;
+import cn.com.nggirl.ngdemo.anim.Status;
 
 public class DataServer {
 
