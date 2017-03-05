@@ -26,4 +26,11 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_pull_zoom"
         android:layout_below="@id/btn_view_anim"/>
+
+    <Button
+        android:id="@+id/btn_titlebar_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_titlebar_gradient"
+        android:layout_below="@id/btn_pull_zoom"/>
 </RelativeLayout>

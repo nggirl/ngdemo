@@ -6,8 +6,9 @@
 
     <string name="action_settings">Settings</string>
 
-    <string name="btn_view_anim">View Animations</string>
-    <string name="btn_pull_zoom">Pull Zoom Header Recyclerview</string>
+    <string name="btn_view_anim">自定义动画</string>
+    <string name="btn_pull_zoom">Recyclerview头部下拉放大</string>
+    <string name="btn_titlebar_gradient">标题栏渐变</string>
 
     <string name="main_search_bar_hint">搜索帖子、用户、商品</string>
 

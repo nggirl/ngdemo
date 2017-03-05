@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
+import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -63,6 +64,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 final Intent intent = PullZoomRecyclerViewActivity.newInstance(MainActivity.this);
+                startActivity(intent);
+            }
+        });
+
+        final View btnGradient = findViewById(R.id.btn_titlebar_gradient);
+        btnGradient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent = TitlebarGradientActivity.newInstance(MainActivity.this);
                 startActivity(intent);
             }
         });
