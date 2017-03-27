@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
 import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
+import cn.com.nggirl.ngdemo.transition.ZoomingMainActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -73,6 +74,14 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 final Intent intent = TitlebarGradientActivity.newInstance(MainActivity.this);
+                startActivity(intent);
+            }
+        });
+        final View btnZoom = findViewById(R.id.btn_zoom_view_transition);
+        btnZoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent = ZoomingMainActivity.newInstance(MainActivity.this);
                 startActivity(intent);
             }
         });

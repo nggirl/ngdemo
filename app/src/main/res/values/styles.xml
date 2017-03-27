@@ -17,6 +17,14 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="DarkTheme" parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/DarkActionBar</item>
+    </style>
+
+    <style name="DarkActionBar" parent="android:Widget.Holo.ActionBar">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
     <style name="tweetName">
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textStyle">bold</item>
