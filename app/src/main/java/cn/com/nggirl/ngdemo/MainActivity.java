@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
+import cn.com.nggirl.ngdemo.scaletransitionanim.ScaleZoomMainActivity;
 import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
 import cn.com.nggirl.ngdemo.transition.ZoomingMainActivity;
 
@@ -82,6 +83,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 final Intent intent = ZoomingMainActivity.newInstance(MainActivity.this);
+                startActivity(intent);
+            }
+        });
+
+        final View btnZoom2 = findViewById(R.id.btn_zoom_view_transition2);
+        btnZoom2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent = ScaleZoomMainActivity.newInstance(MainActivity.this);
                 startActivity(intent);
             }
         });

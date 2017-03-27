@@ -39,4 +39,10 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_zoom_view_transition"
         android:layout_below="@id/btn_titlebar_gradient"/>
+    <Button
+        android:id="@+id/btn_zoom_view_transition2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_zoom_view_transition2"
+        android:layout_below="@id/btn_zoom_view_transition"/>
 </RelativeLayout>

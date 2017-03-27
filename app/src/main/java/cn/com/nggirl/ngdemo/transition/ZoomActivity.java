@@ -75,6 +75,14 @@ public class ZoomActivity extends FragmentActivity {
             }
         });
 
+        final View thumb3View = findViewById(R.id.thumb_button_3);
+        thumb3View.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                zoomImageFromThumb(thumb3View, R.drawable.image1);
+            }
+        });
+
         // Retrieve and cache the system's default "short" animation time.
         mShortAnimationDuration = getResources().getInteger(android.R.integer.config_shortAnimTime);
     }

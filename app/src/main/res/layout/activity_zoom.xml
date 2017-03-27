@@ -59,6 +59,13 @@
                 android:src="@drawable/thumb2"
                 android:scaleType="centerCrop"
                 android:contentDescription="@string/description_image_2" />
+            <cn.com.nggirl.ngdemo.transition.TouchHighlightImageButton
+                android:id="@+id/thumb_button_3"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:src="@drawable/thumb1"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/description_image_1" />
 
         </LinearLayout>
 
