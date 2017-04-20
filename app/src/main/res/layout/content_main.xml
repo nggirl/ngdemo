@@ -62,4 +62,11 @@
         android:layout_below="@id/btn_view_big_pic"
         android:text="@string/btn_view_big_pic2" />
 
+    <Button
+        android:id="@+id/btn_view_launch_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_view_big_pic2"
+        android:text="@string/btn_view_launch_mode" />
+
 </RelativeLayout>

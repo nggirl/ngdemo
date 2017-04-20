@@ -11,6 +11,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:persistent="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -26,20 +27,20 @@
 
         <activity
             android:name=".anim.ViewPropertyAnimationActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".scaletransitionanim.ScaleZoomMainActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".pullzoom.PullZoomRecyclerViewActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".titlebargradient.TitlebarGradientActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
 
         <activity
             android:name=".transition.ZoomingMainActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
 
         <activity
             android:name=".transition.CrossfadeActivity"
@@ -83,21 +84,24 @@
         <activity
             android:name=".transition.LayoutChangesActivity"
             android:label="@string/title_layout_changes"
-            android:parentActivityName=".MainActivity">>
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".bigpic.BigPicActivity" />
+        <activity android:name=".bigpic.BigPicActivityTwo" />
+        <activity android:name=".launchmode.LaunchModelActivity" />
+
+        <activity android:name=".launchmode.LaunchModelDefaultA" />
         <activity
-            android:name=".bigpic.BigPicActivity"
-            android:label="@string/title_layout_changes"
-            android:parentActivityName=".MainActivity">>
-        </activity>
+            android:name=".launchmode.LaunchModelSingleTaskB"
+            android:launchMode="singleTask"
+            android:taskAffinity="cn.com.nggirl.testTask" />
         <activity
-            android:name=".bigpic.BigPicActivityTwo"
-            android:label="@string/title_layout_changes"
-            android:parentActivityName=".MainActivity">>
-        </activity>
+            android:name=".launchmode.LaunchModelSingleTaskC"
+            android:launchMode="singleTask"
+            android:taskAffinity="cn.com.nggirl.testTask" />
     </application>
 
 </manifest>

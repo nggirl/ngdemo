@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen_10">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Default"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Default system always creates a new instance of the activity in the target task and routes the intent to it.\n“Default” is also the default mode when you assign no launch mode to an Activity, which means if you do not assign any launch mode to a Activity, then that Activity will be the “default” launch mode." />
+
+    <Button
+        android:id="@+id/btn_default_a"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A(default) -> B(singleTask, affinity=”2″) -> A (default)"
+        android:textColor="@color/font_4c"
+        android:textSize="@dimen/font_10" />
+
+</LinearLayout>
