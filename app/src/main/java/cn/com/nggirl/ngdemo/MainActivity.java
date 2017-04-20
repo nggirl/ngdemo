@@ -3,9 +3,8 @@ package cn.com.nggirl.ngdemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,9 +12,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
+import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
+import cn.com.nggirl.ngdemo.bigpic.BigPicActivityTwo;
+import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 import cn.com.nggirl.ngdemo.scaletransitionanim.ScaleZoomMainActivity;
 import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
 import cn.com.nggirl.ngdemo.transition.ZoomingMainActivity;
@@ -101,6 +103,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 final Intent intent = BigPicActivity.newInstance(MainActivity.this);
+                startActivity(intent);
+            }
+        });
+
+        final View btnBigPic2 = findViewById(R.id.btn_view_big_pic2);
+        btnBigPic2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent = BigPicActivityTwo.newInstance(MainActivity.this);
                 startActivity(intent);
             }
         });

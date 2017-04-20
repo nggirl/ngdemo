@@ -1,4 +1,4 @@
-package cn.com.nggirl.ngdemo;
+package cn.com.nggirl.ngdemo.bigpic;
 
 import android.content.Intent;
 import android.graphics.PointF;
@@ -15,22 +15,26 @@ import com.lzy.okgo.callback.FileCallback;
 
 import java.io.File;
 
+import cn.com.nggirl.ngdemo.MainActivity;
+import cn.com.nggirl.ngdemo.R;
 import okhttp3.Call;
 import okhttp3.Response;
 
 public class BigPicActivity extends AppCompatActivity {
     private SubsamplingScaleImageView scaleImageView;
     private SubsamplingScaleImageView scaleImageView2;
+
     public static Intent newInstance(MainActivity mainActivity) {
         return new Intent(mainActivity, BigPicActivity.class);
     }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_big_pic);
         scaleImageView = (SubsamplingScaleImageView) findViewById(R.id.view_big_pic);
         scaleImageView2 = (SubsamplingScaleImageView) findViewById(R.id.view_big_pic2);
-        loadBigImageFile("https://photosd.nggirl.com.cn/work/1b0ae16d56cc42aa8a4f5a3cd02c576c.jpg@610w_610h_1e.jpg", scaleImageView);
+        loadBigImageFile("https://photosd.nggirl.com.cn/work/7bca1abde2fc451cb6535e1a3ddfdfbb.jpg@70Q", scaleImageView);
         loadBigImageFile("https://photosd.nggirl.com.cn/work/1b0ae16d56cc42aa8a4f5a3cd02c576c.jpg@610w_610h_1e.jpg", scaleImageView2);
     }
 
