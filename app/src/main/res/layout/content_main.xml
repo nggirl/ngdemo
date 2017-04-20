@@ -45,4 +45,11 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_zoom_view_transition2"
         android:layout_below="@id/btn_zoom_view_transition"/>
+    <Button
+        android:id="@+id/btn_view_big_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_view_big_pic"
+        android:layout_below="@id/btn_zoom_view_transition"/>
+
 </RelativeLayout>

@@ -81,6 +81,10 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
+        <activity android:name=".BigPicActivity"
+            android:label="@string/title_layout_changes"
+            android:parentActivityName=".MainActivity">>
+        </activity>
     </application>
 
 </manifest>

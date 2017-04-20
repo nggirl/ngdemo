@@ -95,6 +95,15 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+
+        final View btnBigPic = findViewById(R.id.btn_view_big_pic);
+        btnBigPic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent = BigPicActivity.newInstance(MainActivity.this);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

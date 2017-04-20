@@ -11,6 +11,7 @@
     <string name="btn_titlebar_gradient">标题栏渐变</string>
     <string name="btn_zoom_view_transition">微信朋友圈照片打开效果</string>
     <string name="btn_zoom_view_transition2">微信朋友圈照片打开和查看效果(手势缩放)</string>
+    <string name="btn_view_big_pic">查看大图</string>
 
     <string name="main_search_bar_hint">搜索帖子、用户、商品</string>
 
