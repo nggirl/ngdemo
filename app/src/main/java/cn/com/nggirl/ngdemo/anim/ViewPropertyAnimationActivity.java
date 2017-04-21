@@ -18,6 +18,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 
 import cn.com.nggirl.ngdemo.R;
 import cn.com.nggirl.ngdemo.model.DataServer;
+import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 
 /**
  * Android属性动画的用法
@@ -30,8 +31,8 @@ public class ViewPropertyAnimationActivity extends AppCompatActivity {
     private TextView tvContent;
     private RecyclerView mRecyclerView;
 
-    public static Intent newInstance(Context context) {
-        return new Intent(context, ViewPropertyAnimationActivity.class);
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, ViewPropertyAnimationActivity.class));
     }
 
     @Override

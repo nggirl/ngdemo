@@ -17,6 +17,7 @@ import com.dinuscxj.pullzoom.PullZoomRecyclerView;
 
 import cn.com.nggirl.ngdemo.R;
 import cn.com.nggirl.ngdemo.model.DataServer;
+import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
 
 /**
  * 下拉放大
@@ -24,8 +25,8 @@ import cn.com.nggirl.ngdemo.model.DataServer;
 public class PullZoomRecyclerViewActivity extends AppCompatActivity {
     private PullZoomRecyclerView mRecyclerView;
 
-    public static Intent newInstance(Context context) {
-        return new Intent(context, PullZoomRecyclerViewActivity.class);
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, PullZoomRecyclerViewActivity.class));
     }
 
     @Override

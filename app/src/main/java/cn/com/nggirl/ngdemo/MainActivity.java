@@ -1,6 +1,5 @@
 package cn.com.nggirl.ngdemo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -13,7 +12,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
 import cn.com.nggirl.ngdemo.bannerpicscale.BannerPicScaleActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
@@ -27,10 +31,40 @@ import cn.com.nggirl.ngdemo.transition.ZoomingMainActivity;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.btn_view_anim)
+    Button btnViewAnim;
+    @BindView(R.id.btn_pull_zoom)
+    Button btnPullZoom;
+    @BindView(R.id.btn_titlebar_gradient)
+    Button btnTitlebarGradient;
+    @BindView(R.id.btn_zoom_view_transition)
+    Button btnZoomViewTransition;
+    @BindView(R.id.btn_zoom_view_transition2)
+    Button btnZoomViewTransition2;
+    @BindView(R.id.btn_view_big_pic)
+    Button btnViewBigPic;
+    @BindView(R.id.btn_view_big_pic2)
+    Button btnViewBigPic2;
+    @BindView(R.id.btn_view_launch_mode)
+    Button btnViewLaunchMode;
+    @BindView(R.id.btn_view_banner_pic_scale)
+    Button btnViewBannerPicScale;
+    @BindView(R.id.content_main)
+    RelativeLayout contentMain;
+    @BindView(R.id.fab)
+    FloatingActionButton fab;
+    @BindView(R.id.nav_view)
+    NavigationView navView;
+    @BindView(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -51,86 +85,41 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        initView();
     }
 
-    private void initView() {
-        final View btnViewAnim = findViewById(R.id.btn_view_anim);
-        btnViewAnim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Intent intent = ViewPropertyAnimationActivity.newInstance(MainActivity.this);
-                startActivity(intent);
-            }
-        });
-
-        final View btnPullZoom = findViewById(R.id.btn_pull_zoom);
-        btnPullZoom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Intent intent = PullZoomRecyclerViewActivity.newInstance(MainActivity.this);
-                startActivity(intent);
-            }
-        });
-
-        final View btnGradient = findViewById(R.id.btn_titlebar_gradient);
-        btnGradient.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Intent intent = TitlebarGradientActivity.newInstance(MainActivity.this);
-                startActivity(intent);
-            }
-        });
-        final View btnZoom = findViewById(R.id.btn_zoom_view_transition);
-        btnZoom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Intent intent = ZoomingMainActivity.newInstance(MainActivity.this);
-                startActivity(intent);
-            }
-        });
-
-        final View btnZoom2 = findViewById(R.id.btn_zoom_view_transition2);
-        btnZoom2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Intent intent = ScaleZoomMainActivity.newInstance(MainActivity.this);
-                startActivity(intent);
-            }
-        });
-
-        final View btnBigPic = findViewById(R.id.btn_view_big_pic);
-        btnBigPic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Intent intent = BigPicActivity.newInstance(MainActivity.this);
-                startActivity(intent);
-            }
-        });
-
-        final View btnBigPic2 = findViewById(R.id.btn_view_big_pic2);
-        btnBigPic2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final Intent intent = BigPicActivityTwo.newInstance(MainActivity.this);
-                startActivity(intent);
-            }
-        });
-
-        findViewById(R.id.btn_view_launch_mode).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    @OnClick({R.id.btn_view_anim, R.id.btn_pull_zoom, R.id.btn_titlebar_gradient,
+            R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
+            R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn_view_anim:
+                ViewPropertyAnimationActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_pull_zoom:
+                PullZoomRecyclerViewActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_titlebar_gradient:
+                TitlebarGradientActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_zoom_view_transition:
+                ZoomingMainActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_zoom_view_transition2:
+                ScaleZoomMainActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_view_big_pic:
+                BigPicActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_view_big_pic2:
+                BigPicActivityTwo.start(MainActivity.this);
+                break;
+            case R.id.btn_view_launch_mode:
                 LaunchModeActivity.start(MainActivity.this);
-            }
-        });
-
-        findViewById(R.id.btn_view_banner_pic_scale).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+                break;
+            case R.id.btn_view_banner_pic_scale:
                 BannerPicScaleActivity.start(MainActivity.this);
-            }
-        });
+                break;
+        }
     }
 
     @Override

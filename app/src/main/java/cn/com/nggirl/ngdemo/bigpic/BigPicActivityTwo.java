@@ -1,5 +1,6 @@
 package cn.com.nggirl.ngdemo.bigpic;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,10 +11,12 @@ import com.github.piasy.biv.view.BigImageView;
 
 import cn.com.nggirl.ngdemo.MainActivity;
 import cn.com.nggirl.ngdemo.R;
+import cn.com.nggirl.ngdemo.launchmode.LaunchModeActivity;
 
 public class BigPicActivityTwo extends AppCompatActivity {
-    public static Intent newInstance(MainActivity mainActivity) {
-        return new Intent(mainActivity, BigPicActivityTwo.class);
+
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, BigPicActivityTwo.class));
     }
 
     @Override

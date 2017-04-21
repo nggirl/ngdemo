@@ -18,6 +18,7 @@ package cn.com.nggirl.ngdemo.transition;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,14 +27,16 @@ import android.widget.ListView;
 
 import cn.com.nggirl.ngdemo.MainActivity;
 import cn.com.nggirl.ngdemo.R;
+import cn.com.nggirl.ngdemo.scaletransitionanim.ScaleZoomMainActivity;
 
 /**
  * The launchpad activity for this sample project. This activity launches other activities that
  * demonstrate implementations of common animations.
  */
 public class ZoomingMainActivity extends ListActivity {
-    public static Intent newInstance(MainActivity mainActivity) {
-        return new Intent(mainActivity, ZoomingMainActivity.class);
+
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, ZoomingMainActivity.class));
     }
 
     /**

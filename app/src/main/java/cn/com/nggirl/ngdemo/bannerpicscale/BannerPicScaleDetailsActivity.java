@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.util.DisplayMetrics;
 import android.view.ViewGroup;
 
@@ -14,11 +13,14 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import cn.bingoogolapple.bgabanner.BGABanner;
 import cn.com.nggirl.ngdemo.R;
 
 public class BannerPicScaleDetailsActivity extends AppCompatActivity {
 
+    @BindView(R.id.product_details_view_pager)
     BGABanner banner;
     private int scaleType;
 
@@ -32,7 +34,7 @@ public class BannerPicScaleDetailsActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner_pic_scale_detail);
-        banner = (BGABanner) findViewById(R.id.product_details_view_pager);
+        ButterKnife.bind(this);
         scaleType = getIntent().getIntExtra("scaleType", 0);
         int height = 0;
         int width = 0;

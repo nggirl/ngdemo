@@ -16,6 +16,7 @@ import android.widget.TextView;
 import cn.com.nggirl.ngdemo.ColorUtil;
 import cn.com.nggirl.ngdemo.CommonAdapter;
 import cn.com.nggirl.ngdemo.R;
+import cn.com.nggirl.ngdemo.transition.ZoomingMainActivity;
 
 /**
  * 标题栏随着RecyclerView滚动背景渐变
@@ -30,8 +31,8 @@ public class TitlebarGradientActivity extends AppCompatActivity {
     private int totalDy;
     private float maxScrollDistance = 1080;
 
-    public static Intent newInstance(Context context) {
-        return new Intent(context, TitlebarGradientActivity.class);
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, TitlebarGradientActivity.class));
     }
 
     @Override

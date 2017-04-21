@@ -1,5 +1,6 @@
 package cn.com.nggirl.ngdemo.bigpic;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -24,8 +25,8 @@ public class BigPicActivity extends AppCompatActivity {
     private SubsamplingScaleImageView scaleImageView;
     private SubsamplingScaleImageView scaleImageView2;
 
-    public static Intent newInstance(MainActivity mainActivity) {
-        return new Intent(mainActivity, BigPicActivity.class);
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, BigPicActivity.class));
     }
 
     @Override

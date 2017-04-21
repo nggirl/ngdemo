@@ -1,5 +1,6 @@
 package cn.com.nggirl.ngdemo.scaletransitionanim;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
@@ -23,6 +24,7 @@ import java.util.List;
 
 import cn.com.nggirl.ngdemo.MainActivity;
 import cn.com.nggirl.ngdemo.R;
+import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
 
 public class ScaleZoomMainActivity extends AppCompatActivity {
 
@@ -38,6 +40,10 @@ public class ScaleZoomMainActivity extends AppCompatActivity {
     private int mSolidHeight = 0;
     private Rect mRVBounds = new Rect();
     private GridLayoutManager mGridLayoutManager;
+
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, ScaleZoomMainActivity.class));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,10 +91,6 @@ public class ScaleZoomMainActivity extends AppCompatActivity {
 
             assembleDataList();
         }
-    }
-
-    public static Intent newInstance(MainActivity mainActivity) {
-        return new Intent(mainActivity, ScaleZoomMainActivity.class);
     }
 
     private class MyRecyclerOnScrollListener extends RecyclerView.OnScrollListener {
