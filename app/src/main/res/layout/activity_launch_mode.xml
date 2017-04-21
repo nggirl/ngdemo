@@ -26,5 +26,13 @@
         android:text="A(default) -> B(singleTask, affinity=”2″) -> A (default)"
         android:textColor="@color/font_4c"
         android:textSize="@dimen/font_10" />
+    <Button
+        android:id="@+id/btn_singleinstance"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A(default) –> B(singleInstance) –> C(default)"
+        android:textColor="@color/font_4c"
+        android:textSize="@dimen/font_10" />
 
 </LinearLayout>

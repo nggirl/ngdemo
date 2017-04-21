@@ -91,17 +91,21 @@
         </activity>
         <activity android:name=".bigpic.BigPicActivity" />
         <activity android:name=".bigpic.BigPicActivityTwo" />
-        <activity android:name=".launchmode.LaunchModelActivity" />
+        <activity android:name=".launchmode.LaunchModeActivity" />
 
-        <activity android:name=".launchmode.LaunchModelDefaultA" />
+        <activity android:name=".launchmode.LaunchModeDefaultA" />
+        <activity android:name=".launchmode.LaunchModeDefaultC" />
         <activity
-            android:name=".launchmode.LaunchModelSingleTaskB"
+            android:name=".launchmode.LaunchModeSingleTaskB"
             android:launchMode="singleTask"
             android:taskAffinity="cn.com.nggirl.testTask" />
         <activity
-            android:name=".launchmode.LaunchModelSingleTaskC"
+            android:name=".launchmode.LaunchModeSingleTaskC"
             android:launchMode="singleTask"
             android:taskAffinity="cn.com.nggirl.testTask" />
+        <activity
+            android:name=".launchmode.LaunchModeSingleInstanceB"
+            android:launchMode="singleInstance" />
     </application>
 
 </manifest>

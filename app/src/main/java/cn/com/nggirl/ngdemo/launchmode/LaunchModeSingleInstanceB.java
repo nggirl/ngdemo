@@ -9,7 +9,12 @@ import android.view.View;
 
 import cn.com.nggirl.ngdemo.R;
 
-public class LaunchModelSingleTaskC extends AppCompatActivity {
+public class LaunchModeSingleInstanceB extends AppCompatActivity {
+
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, LaunchModeSingleInstanceB.class));
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,12 +22,8 @@ public class LaunchModelSingleTaskC extends AppCompatActivity {
         findViewById(R.id.btn_launch).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LaunchModelSingleTaskB.start(LaunchModelSingleTaskC.this);
+                LaunchModeDefaultC.start(LaunchModeSingleInstanceB.this);
             }
         });
-    }
-
-    public static void start(Context context) {
-        context.startActivity(new Intent(context, LaunchModelSingleTaskC.class));
     }
 }

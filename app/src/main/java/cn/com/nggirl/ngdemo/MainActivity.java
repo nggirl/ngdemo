@@ -17,7 +17,7 @@ import android.view.View;
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivityTwo;
-import cn.com.nggirl.ngdemo.launchmode.LaunchModelActivity;
+import cn.com.nggirl.ngdemo.launchmode.LaunchModeActivity;
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 import cn.com.nggirl.ngdemo.scaletransitionanim.ScaleZoomMainActivity;
 import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.btn_view_launch_mode).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LaunchModelActivity.start(MainActivity.this);
+                LaunchModeActivity.start(MainActivity.this);
             }
         });
     }
