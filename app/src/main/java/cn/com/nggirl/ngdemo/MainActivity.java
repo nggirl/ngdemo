@@ -24,6 +24,7 @@ import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivityTwo;
 import cn.com.nggirl.ngdemo.launchmode.LaunchModeActivity;
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
+import cn.com.nggirl.ngdemo.retrofit.RetrofitDemoActivity;
 import cn.com.nggirl.ngdemo.scaletransitionanim.ScaleZoomMainActivity;
 import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
 import cn.com.nggirl.ngdemo.transition.ZoomingMainActivity;
@@ -59,6 +60,8 @@ public class MainActivity extends AppCompatActivity
     NavigationView navView;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
+    @BindView(R.id.btn_view_retrofit)
+    Button btnViewRetrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +92,8 @@ public class MainActivity extends AppCompatActivity
 
     @OnClick({R.id.btn_view_anim, R.id.btn_pull_zoom, R.id.btn_titlebar_gradient,
             R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
-            R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale})
+            R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale,
+            R.id.btn_view_retrofit})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_view_anim:
@@ -118,6 +122,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.btn_view_banner_pic_scale:
                 BannerPicScaleActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_view_retrofit:
+                RetrofitDemoActivity.start(MainActivity.this);
                 break;
         }
     }

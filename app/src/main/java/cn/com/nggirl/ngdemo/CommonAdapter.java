@@ -4,7 +4,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
 import cn.com.nggirl.ngdemo.anim.Status;
-import cn.com.nggirl.ngdemo.model.DataServer;
+import cn.com.nggirl.ngdemo.business.DataServer;
 
 public class CommonAdapter extends BaseQuickAdapter<Status, BaseViewHolder> {
     public CommonAdapter() {

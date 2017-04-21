@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".App"
+        android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -109,6 +109,7 @@
 
         <activity android:name=".bannerpicscale.BannerPicScaleActivity" />
         <activity android:name=".bannerpicscale.BannerPicScaleDetailsActivity" />
+        <activity android:name=".retrofit.RetrofitDemoActivity" />
 
     </application>
 

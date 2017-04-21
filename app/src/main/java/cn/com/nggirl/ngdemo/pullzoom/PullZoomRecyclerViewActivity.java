@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
@@ -16,8 +14,7 @@ import com.chad.library.adapter.base.BaseViewHolder;
 import com.dinuscxj.pullzoom.PullZoomRecyclerView;
 
 import cn.com.nggirl.ngdemo.R;
-import cn.com.nggirl.ngdemo.model.DataServer;
-import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
+import cn.com.nggirl.ngdemo.business.DataServer;
 
 /**
  * 下拉放大

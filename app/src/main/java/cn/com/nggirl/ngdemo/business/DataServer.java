@@ -1,4 +1,4 @@
-package cn.com.nggirl.ngdemo.model;
+package cn.com.nggirl.ngdemo.business;
 
 import java.util.ArrayList;
 import java.util.List;
