@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dimen_10"
+    android:orientation="vertical">
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/product_details_view_pager"
+        style="@style/BannerDefaultStyle"
+        android:layout_height="wrap_content"
+        app:banner_indicatorGravity="bottom|center_horizontal"
+        app:banner_pointAutoPlayInterval="5000" />
+</LinearLayout>

@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
+import cn.com.nggirl.ngdemo.bannerpicscale.BannerPicScaleActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivityTwo;
 import cn.com.nggirl.ngdemo.launchmode.LaunchModeActivity;
@@ -121,6 +122,13 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 LaunchModeActivity.start(MainActivity.this);
+            }
+        });
+
+        findViewById(R.id.btn_view_banner_pic_scale).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BannerPicScaleActivity.start(MainActivity.this);
             }
         });
     }

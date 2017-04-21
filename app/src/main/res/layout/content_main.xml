@@ -68,5 +68,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn_view_big_pic2"
         android:text="@string/btn_view_launch_mode" />
+    <Button
+        android:id="@+id/btn_view_banner_pic_scale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_view_launch_mode"
+        android:text="@string/btn_view_banner_scale" />
 
 </RelativeLayout>
