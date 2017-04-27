@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -29,6 +30,10 @@ public class RetrofitDemoActivity extends AppCompatActivity implements RetrofitD
     EditText etRetrofitInputRepo;
     @BindView(R.id.btn_query)
     Button btnQuery;
+    @BindView(R.id.tv_download_progress)
+    TextView mTvDownloadProgress;
+    @BindView(R.id.btn_download)
+    Button mBtnDownload;
     private RetrofitDemoContract.Presenter mPresenter;
 
     public static void start(Context context) {
@@ -41,24 +46,6 @@ public class RetrofitDemoActivity extends AppCompatActivity implements RetrofitD
         setContentView(R.layout.activity_retrofit);
         ButterKnife.bind(this);
         new RetrofitDemoPresenter(this);
-    }
-
-    @OnClick(R.id.btn_query)
-    public void onViewClicked() {
-        final String userInput = etRetrofitInputUser.getText().toString().trim();
-        final String repoInput = etRetrofitInputRepo.getText().toString().trim();
-        if (TextUtils.isEmpty(userInput)) {
-            Toast.makeText(RetrofitDemoActivity.this, "请输入查询仓库拥有者", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        if (TextUtils.isEmpty(repoInput)) {
-            Toast.makeText(RetrofitDemoActivity.this, "请输入查询仓库", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        if (mPresenter != null) {
-            mPresenter.contributors(userInput, repoInput);
-        }
     }
 
     @Override
@@ -93,10 +80,42 @@ public class RetrofitDemoActivity extends AppCompatActivity implements RetrofitD
     }
 
     @Override
+    public void showDownloadProgress(String progress) {
+
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
         if (mPresenter != null) {
             mPresenter.unsubscribe();
+        }
+    }
+
+    @OnClick({R.id.btn_query, R.id.btn_download})
+    public void onViewClicked(View view) {
+        switch (view.getId()) {
+            case R.id.btn_query:
+                final String userInput = etRetrofitInputUser.getText().toString().trim();
+                final String repoInput = etRetrofitInputRepo.getText().toString().trim();
+                if (TextUtils.isEmpty(userInput)) {
+                    Toast.makeText(RetrofitDemoActivity.this, "请输入查询仓库拥有者", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (TextUtils.isEmpty(repoInput)) {
+                    Toast.makeText(RetrofitDemoActivity.this, "请输入查询仓库", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (mPresenter != null) {
+                    mPresenter.contributors(userInput, repoInput);
+                }
+                break;
+            case R.id.btn_download:
+                if (mPresenter != null) {
+                    mPresenter.downloadFile("https://photosd.nggirl.com.cn/work/7bca1abde2fc451cb6535e1a3ddfdfbb.jpg");
+                }
+                break;
         }
     }
 }

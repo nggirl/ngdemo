@@ -15,9 +15,13 @@ public interface RetrofitDemoContract {
         void showContributorsError(String message);
 
         void showContributorsEmpty();
+
+        void showDownloadProgress(String progress);
     }
 
     interface Presenter extends BasePresenter {
         void contributors(String owner, String repo);
+
+        void downloadFile(String url);
     }
 }

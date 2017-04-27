@@ -11,7 +11,7 @@ import rx.Observable;
 public class ServerModel {
 
     private ServerApi mShareApi;
-    private static ServerModel mShareModel;
+    private volatile static ServerModel mShareModel;
 
     public static ServerModel getInstance() {
         if (mShareModel == null) {

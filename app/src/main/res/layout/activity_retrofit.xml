@@ -36,4 +36,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_20"
         android:text="查询" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:textSize="@dimen/font_12"
+        android:text="下载进度"/>
+
+    <TextView
+        android:id="@+id/tv_download_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:textSize="@dimen/font_14"
+        android:textColor="@color/font_4c"
+        android:text="下载进度"/>
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:text="下载" />
 </LinearLayout>
