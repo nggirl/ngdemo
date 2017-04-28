@@ -110,6 +110,7 @@
         <activity android:name=".bannerpicscale.BannerPicScaleActivity" />
         <activity android:name=".bannerpicscale.BannerPicScaleDetailsActivity" />
         <activity android:name=".retrofit.RetrofitDemoActivity" />
+        <activity android:name=".databinding.DataBindingActivity" />
 
     </application>
 

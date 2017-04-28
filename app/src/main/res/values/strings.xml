@@ -16,6 +16,7 @@
     <string name="btn_view_launch_mode">Activity启动模式</string>
     <string name="btn_view_banner_scale">轮播图图片展示效果</string>
     <string name="btn_view_retrofit">Retrofit2 OkHttp3示例</string>
+    <string name="btn_view_data_binding">Data Binding</string>
 
     <string name="main_search_bar_hint">搜索帖子、用户、商品</string>
 
