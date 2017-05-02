@@ -22,12 +22,24 @@ public class DataBindingActivity extends AppCompatActivity {
         ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
         binding.setUser(new User("Test", "User"));
         MyHandlers handlers = new MyHandlers();
+        Presenter presenter = new Presenter();
         binding.setHandlers(handlers);
+        binding.setPresenter(presenter);
     }
 
     public class MyHandlers {
         public void onClickFriend(View view) {
             Toast.makeText(DataBindingActivity.this, "onClick ", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public class Presenter {
+        public void onSaveClick(Task task) {
+            Toast.makeText(DataBindingActivity.this, "onSaveClick ", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public class Task {
+
     }
 }

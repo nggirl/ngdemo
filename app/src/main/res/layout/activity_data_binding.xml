@@ -11,6 +11,14 @@
         <variable
             name="user"
             type="cn.com.nggirl.ngdemo.databinding.User"/>
+
+        <variable
+            name="task"
+            type="cn.com.nggirl.ngdemo.databinding.DataBindingActivity.Task"/>
+
+        <variable
+            name="presenter"
+            type="cn.com.nggirl.ngdemo.databinding.DataBindingActivity.Presenter"/>
     </data>
 
     <LinearLayout
@@ -36,8 +44,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_20"
-            android:onClick="@{handlers.onClickFriend}"
-            android:text="测试点击事件"/>
+            android:onClick="@{handlers::onClickFriend}"
+            android:text="测试点击事件-Method References"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20"
+            android:onClick="@{() -> presenter.onSaveClick(task)}"
+            android:text="测试点击事件-Listener Bindings"/>
 
     </LinearLayout>
 </layout>
