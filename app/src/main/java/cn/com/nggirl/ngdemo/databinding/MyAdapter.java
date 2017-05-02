@@ -1,10 +1,14 @@
 package cn.com.nggirl.ngdemo.databinding;
 
+import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -53,6 +57,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         final TemperatureData temperatureData = data.get(position);
         holder.bind(temperatureData);
 
+    }
+
+    @BindingAdapter("android:src")
+    public static void setImageUrl(ImageView view, String url) {
+        Glide.with(view.getContext()).load(url).into(view);
     }
 
     // Return the size of your dataset (invoked by the layout manager)
