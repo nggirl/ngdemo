@@ -1,58 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
         <variable
-            name="handlers"
-            type="cn.com.nggirl.ngdemo.databinding.DataBindingActivity.MyHandlers"/>
-
-        <variable
-            name="user"
-            type="cn.com.nggirl.ngdemo.databinding.User"/>
-
-        <variable
-            name="task"
-            type="cn.com.nggirl.ngdemo.databinding.DataBindingActivity.Task"/>
+            name="temp"
+            type="cn.com.nggirl.ngdemo.databinding.TemperatureData"/>
 
         <variable
             name="presenter"
-            type="cn.com.nggirl.ngdemo.databinding.DataBindingActivity.Presenter"/>
+            type="cn.com.nggirl.ngdemo.databinding.DataBindingPresenter"/>
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{user.firstName}"
-            tools:text="Data binding"/>
+            android:text="@={temp.location}"
+            />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_20"
-            android:text="@{user.lastName}"
-            tools:text="second"/>
+            android:text="@={temp.celsius}"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@={temp.celsius}"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_20"
-            android:onClick="@{handlers::onClickFriend}"
-            android:text="测试点击事件-Method References"/>
+            android:onClick="@{() -> presenter.onShowData(temp)}"
+            android:text="Show data model"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_20"
-            android:onClick="@{() -> presenter.onSaveClick(task)}"
-            android:text="测试点击事件-Listener Bindings"/>
+            android:onClick="@{() -> presenter.showList()}"
+            android:text="Start second activity"
+            />
 
     </LinearLayout>
 </layout>

@@ -6,12 +6,11 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Toast;
 
 import cn.com.nggirl.ngdemo.R;
 
-public class DataBindingActivity extends AppCompatActivity {
+public class DataBindingActivity extends AppCompatActivity implements DataBindingContract.View {
     public static void start(Context context) {
         context.startActivity(new Intent(context, DataBindingActivity.class));
     }
@@ -20,26 +19,20 @@ public class DataBindingActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
-        binding.setUser(new User("Test", "User"));
-        MyHandlers handlers = new MyHandlers();
-        Presenter presenter = new Presenter();
-        binding.setHandlers(handlers);
+        DataBindingPresenter presenter = new DataBindingPresenter(this);
+        TemperatureData temperatureData = new TemperatureData("Hamburg", "10");
+        binding.setTemp(temperatureData);
         binding.setPresenter(presenter);
     }
 
-    public class MyHandlers {
-        public void onClickFriend(View view) {
-            Toast.makeText(DataBindingActivity.this, "onClick ", Toast.LENGTH_SHORT).show();
-        }
+    @Override
+    public void showData(TemperatureData temperatureData) {
+        String celsius = temperatureData.getCelsius();
+        Toast.makeText(this, celsius, Toast.LENGTH_SHORT).show();
     }
 
-    public class Presenter {
-        public void onSaveClick(Task task) {
-            Toast.makeText(DataBindingActivity.this, "onSaveClick ", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public class Task {
-
+    @Override
+    public void startSecondActivity() {
+        DataBindingRecyclerViewActivity.start(DataBindingActivity.this);
     }
 }
