@@ -112,6 +112,7 @@
         <activity android:name=".retrofit.RetrofitDemoActivity" />
         <activity android:name=".databinding.DataBindingActivity" />
         <activity android:name=".databinding.DataBindingRecyclerViewActivity" />
+        <activity android:name=".mvvm.TasksActivity" />
     </application>
 
 </manifest>
