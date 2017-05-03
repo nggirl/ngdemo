@@ -141,4 +141,6 @@
     <dimen name="relative_layout_height">40dp</dimen>
 
     <dimen name="bar_icon_height_userdef">28dp</dimen>
+
+    <dimen name="list_item_padding">8dp</dimen>
 </resources>
