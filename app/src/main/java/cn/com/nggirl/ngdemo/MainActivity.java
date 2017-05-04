@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity
     Button mBtnViewDataBinding;
     @BindView(R.id.btn_view_dagger)
     Button mBtnViewDagger;
+    @BindView(R.id.btn_view_dagger_mvp)
+    Button mBtnViewDaggerMvp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,7 +101,8 @@ public class MainActivity extends AppCompatActivity
     @OnClick({R.id.btn_view_anim, R.id.btn_pull_zoom, R.id.btn_titlebar_gradient,
             R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
             R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale,
-            R.id.btn_view_retrofit, R.id.btn_view_data_binding, R.id.btn_view_dagger})
+            R.id.btn_view_retrofit, R.id.btn_view_data_binding, R.id.btn_view_dagger,
+            R.id.btn_view_dagger_mvp})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_view_anim:
@@ -137,6 +140,11 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.btn_view_dagger:
                 DaggerActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_view_dagger_mvp:
+                cn.com.nggirl.ngdemo.daggermvp.mainscreen.MainActivity.start(MainActivity.this);
+                break;
+            default:
                 break;
         }
     }

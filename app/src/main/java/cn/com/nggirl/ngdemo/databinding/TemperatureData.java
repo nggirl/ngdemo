@@ -3,7 +3,6 @@ package cn.com.nggirl.ngdemo.databinding;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
-import cn.com.nggirl.ngdemo.BR;
 
 public class TemperatureData extends BaseObservable {
     private String location;
@@ -28,12 +27,12 @@ public class TemperatureData extends BaseObservable {
 
     public void setLocation(String location) {
         this.location = location;
-        notifyPropertyChanged(BR.location);
+//        notifyPropertyChanged(BR.location);
     }
 
     public void setCelsius(String celsius) {
         this.celsius = celsius;
-        notifyPropertyChanged(BR.celsius);
+//        notifyPropertyChanged(BR.celsius);
     }
 
 }

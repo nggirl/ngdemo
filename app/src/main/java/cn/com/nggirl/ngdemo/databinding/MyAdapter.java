@@ -12,7 +12,6 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import cn.com.nggirl.ngdemo.BR;
 import cn.com.nggirl.ngdemo.R;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -31,7 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
 
         public void bind(Object obj) {
-            binding.setVariable(BR.obj, obj);
+//            binding.setVariable(BR.obj, obj);
             binding.executePendingBindings();
         }
     }

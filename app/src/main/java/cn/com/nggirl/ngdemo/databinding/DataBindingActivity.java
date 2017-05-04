@@ -18,11 +18,11 @@ public class DataBindingActivity extends AppCompatActivity implements DataBindin
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
-        DataBindingPresenter presenter = new DataBindingPresenter(this);
-        TemperatureData temperatureData = new TemperatureData("Hamburg", "10");
-        binding.setTemp(temperatureData);
-        binding.setPresenter(presenter);
+//        ActivityDataBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding);
+//        DataBindingPresenter presenter = new DataBindingPresenter(this);
+//        TemperatureData temperatureData = new TemperatureData("Hamburg", "10");
+//        binding.setTemp(temperatureData);
+//        binding.setPresenter(presenter);
     }
 
     @Override
