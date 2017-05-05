@@ -40,18 +40,28 @@ public class BannerPicScaleDetailsActivity extends AppCompatActivity {
         int width = 0;
         int h;
         DisplayMetrics d = getResources().getDisplayMetrics();
+        List<String> list = new ArrayList<>();
         switch (scaleType) {
             case ScaleTypeConstants.TYPE_PORTRIT_PIC:
                 height = 1220;
                 width = 457;
+                list.add("R.drawable.protrit");
+                list.add("R.drawable.protrit");
+                list.add("R.drawable.protrit");
                 break;
             case ScaleTypeConstants.TYPE_WIDE_PIC:
                 height = 1220;
                 width = 1880;
+                list.add("R.drawable.wide");
+                list.add("R.drawable.wide");
+                list.add("R.drawable.wide");
                 break;
             case ScaleTypeConstants.TYPE_REC_PIC:
                 height = 800;
                 width = 800;
+                list.add("R.drawable.rec");
+                list.add("R.drawable.rec");
+                list.add("R.drawable.rec");
                 break;
         }
 
@@ -61,17 +71,10 @@ public class BannerPicScaleDetailsActivity extends AppCompatActivity {
         params.height = h;
         banner.setLayoutParams(params);
 
-        List<String> list = new ArrayList<>();
-        list.add("R.drawable.protrit");
-        list.add("R.drawable.protrit");
-        list.add("R.drawable.protrit");
-
         banner.setAdapter(new BGABanner.Adapter<SimpleDraweeView, String>() {
             @Override
             public void fillBannerItem(BGABanner banner, SimpleDraweeView itemView, String model, int position) {
-                SimpleDraweeView simpleDraweeView = (SimpleDraweeView) itemView.findViewById(R.id.sdv_product_details_content);
-
-                simpleDraweeView.setImageURI("res://" + getPackageName() + "/" + R.drawable.protrit);
+                itemView.setImageURI("res://" + getPackageName() + "/" + R.drawable.wide);
             }
         });
         banner.setData(R.layout.item_banner_pic, list, null);
