@@ -26,10 +26,17 @@
             android:text="@string/btn_view_anim"/>
 
         <Button
-            android:id="@+id/btn_pull_zoom"
+            android:id="@+id/btn_custom_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_view_anim"
+            android:text="@string/btn_custom_view"/>
+
+        <Button
+            android:id="@+id/btn_pull_zoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_custom_view"
             android:text="@string/btn_pull_zoom"/>
 
         <Button

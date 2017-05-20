@@ -31,6 +31,7 @@ import cn.com.nggirl.ngdemo.retrofit.RetrofitDemoActivity;
 import cn.com.nggirl.ngdemo.scaletransitionanim.ScaleZoomMainActivity;
 import cn.com.nggirl.ngdemo.titlebargradient.TitlebarGradientActivity;
 import cn.com.nggirl.ngdemo.transition.ZoomingMainActivity;
+import cn.com.nggirl.ngdemo.view.ScrollEventConflictActivity;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity
     Button mBtnViewDaggerMvp;
     @BindView(R.id.btn_adil)
     Button mBtnAdil;
+    @BindView(R.id.btn_custom_view)
+    Button mBtnCustomView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,11 +108,14 @@ public class MainActivity extends AppCompatActivity
             R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
             R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale,
             R.id.btn_view_retrofit, R.id.btn_view_data_binding, R.id.btn_view_dagger,
-            R.id.btn_view_dagger_mvp, R.id.btn_adil})
+            R.id.btn_view_dagger_mvp, R.id.btn_adil, R.id.btn_custom_view})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_view_anim:
                 ViewPropertyAnimationActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_custom_view:
+                ScrollEventConflictActivity.start(MainActivity.this);
                 break;
             case R.id.btn_pull_zoom:
                 PullZoomRecyclerViewActivity.start(MainActivity.this);

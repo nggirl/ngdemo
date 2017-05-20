@@ -116,6 +116,7 @@
         <activity android:name=".daggermvp.mainscreen.MainActivity" />
 
         <activity android:name=".aidl.MessengerActivity"/>
+        <activity android:name=".view.ScrollEventConflictActivity"/>
 
         <service android:name=".aidl.MessengerService"
             android:process=":remote"/>
