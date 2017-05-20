@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".app.App"
+        android:name=".daggermvp.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -114,6 +114,11 @@
         <activity android:name=".databinding.DataBindingRecyclerViewActivity" />
         <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".daggermvp.mainscreen.MainActivity" />
+
+        <activity android:name=".aidl.MessengerActivity"/>
+
+        <service android:name=".aidl.MessengerService"
+            android:process=":remote"/>
     </application>
 
 </manifest>

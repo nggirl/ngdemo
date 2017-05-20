@@ -18,6 +18,7 @@ import android.widget.RelativeLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.com.nggirl.ngdemo.aidl.MessengerActivity;
 import cn.com.nggirl.ngdemo.anim.ViewPropertyAnimationActivity;
 import cn.com.nggirl.ngdemo.bannerpicscale.BannerPicScaleActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
@@ -70,6 +71,8 @@ public class MainActivity extends AppCompatActivity
     Button mBtnViewDagger;
     @BindView(R.id.btn_view_dagger_mvp)
     Button mBtnViewDaggerMvp;
+    @BindView(R.id.btn_adil)
+    Button mBtnAdil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +105,7 @@ public class MainActivity extends AppCompatActivity
             R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
             R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale,
             R.id.btn_view_retrofit, R.id.btn_view_data_binding, R.id.btn_view_dagger,
-            R.id.btn_view_dagger_mvp})
+            R.id.btn_view_dagger_mvp, R.id.btn_adil})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_view_anim:
@@ -143,6 +146,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.btn_view_dagger_mvp:
                 cn.com.nggirl.ngdemo.daggermvp.mainscreen.MainActivity.start(MainActivity.this);
+                break;
+            case R.id.btn_adil:
+                MessengerActivity.start(this);
                 break;
             default:
                 break;

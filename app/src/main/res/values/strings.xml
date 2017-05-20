@@ -19,6 +19,7 @@
     <string name="btn_view_data_binding">Data Binding</string>
     <string name="btn_view_dagger2">Dagger 2</string>
     <string name="btn_view_dagger2_mvp">Dagger 2 MVP</string>
+    <string name="btn_view_aidl">AIDL, Binder</string>
 
     <string name="main_search_bar_hint">搜索帖子、用户、商品</string>
 

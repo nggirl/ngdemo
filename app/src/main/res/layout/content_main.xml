@@ -109,5 +109,12 @@
             android:layout_below="@id/btn_view_dagger"
             android:text="@string/btn_view_dagger2_mvp"/>
 
+        <Button
+            android:id="@+id/btn_adil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_view_dagger_mvp"
+            android:text="@string/btn_view_aidl"/>
+
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
