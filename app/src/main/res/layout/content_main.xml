@@ -20,9 +20,16 @@
         tools:showIn="@layout/app_bar_main">
 
         <Button
+            android:id="@+id/btn_view_keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_view_keyboard_event"/>
+
+        <Button
             android:id="@+id/btn_view_anim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/btn_view_keyboard"
             android:text="@string/btn_view_anim"/>
 
         <Button

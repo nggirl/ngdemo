@@ -117,6 +117,7 @@
 
         <activity android:name=".aidl.MessengerActivity"/>
         <activity android:name=".view.ScrollEventConflictActivity"/>
+        <activity android:name=".keyboard.KeyboardEventActivity"/>
 
         <service android:name=".aidl.MessengerService"
             android:process=":remote"/>

@@ -25,6 +25,7 @@ import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivityTwo;
 import cn.com.nggirl.ngdemo.dagger.DaggerActivity;
 import cn.com.nggirl.ngdemo.databinding.DataBindingActivity;
+import cn.com.nggirl.ngdemo.keyboard.KeyboardEventActivity;
 import cn.com.nggirl.ngdemo.launchmode.LaunchModeActivity;
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
 import cn.com.nggirl.ngdemo.retrofit.RetrofitDemoActivity;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.btn_view_keyboard)
+    Button btnViewKeyboard;
     @BindView(R.id.btn_view_anim)
     Button btnViewAnim;
     @BindView(R.id.btn_pull_zoom)
@@ -104,13 +107,16 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    @OnClick({R.id.btn_view_anim, R.id.btn_pull_zoom, R.id.btn_titlebar_gradient,
+    @OnClick({R.id.btn_view_keyboard, R.id.btn_view_anim, R.id.btn_pull_zoom, R.id.btn_titlebar_gradient,
             R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
             R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale,
             R.id.btn_view_retrofit, R.id.btn_view_data_binding, R.id.btn_view_dagger,
             R.id.btn_view_dagger_mvp, R.id.btn_adil, R.id.btn_custom_view})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.btn_view_keyboard:
+                KeyboardEventActivity.start(MainActivity.this);
+                break;
             case R.id.btn_view_anim:
                 ViewPropertyAnimationActivity.start(MainActivity.this);
                 break;
