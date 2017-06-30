@@ -6,6 +6,7 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="btn_fresco_big_pic">Fresco加载大图</string>
     <string name="btn_view_keyboard_event">键盘事件</string>
     <string name="btn_view_anim">自定义动画</string>
     <string name="btn_custom_view">自定义View组件</string>

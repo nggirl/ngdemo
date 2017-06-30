@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_fresco_big_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        fresco:actualImageScaleType="fitXY"
+        fresco:fadeDuration="300"
+        fresco:failureImage="@drawable/ic_menu_camera"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/ic_menu_camera"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:retryImage="@drawable/ic_menu_camera"
+        fresco:retryImageScaleType="centerInside"
+        fresco:roundAsCircle="false"
+        fresco:roundBottomLeft="false"
+        fresco:roundBottomRight="false"
+        fresco:roundTopLeft="false"
+        fresco:roundTopRight="false"
+        fresco:roundedCornerRadius="5dp"
+        fresco:viewAspectRatio="1"/>
+
+</ScrollView>

@@ -2,6 +2,7 @@ package cn.com.nggirl.ngdemo;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import cn.com.nggirl.ngdemo.anim.Status;
 import cn.com.nggirl.ngdemo.business.DataServer;
@@ -17,13 +18,11 @@ public class CommonAdapter extends BaseQuickAdapter<Status, BaseViewHolder> {
         switch (helper.getLayoutPosition() %
                 3) {
             case 0:
-                helper.setImageResource(R.id.img, R.mipmap.animation_img1);
-                break;
             case 1:
-                helper.setImageResource(R.id.img, R.mipmap.animation_img1);
-                break;
             case 2:
-                helper.setImageResource(R.id.img, R.mipmap.animation_img1);
+                SimpleDraweeView draweeView = helper.getView(R.id.iv_fresco_big_pic);
+                draweeView.setAspectRatio(0.1812063163f);
+                draweeView.setImageURI("file://" + "/storage/emulated/0/DCIM/big_pic/超长图3.jpg");
                 break;
         }
         helper.setText(R.id.tweetName, "Hoteis in Rio de Janeiro");

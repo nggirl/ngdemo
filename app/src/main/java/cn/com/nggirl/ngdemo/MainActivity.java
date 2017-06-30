@@ -25,6 +25,7 @@ import cn.com.nggirl.ngdemo.bigpic.BigPicActivity;
 import cn.com.nggirl.ngdemo.bigpic.BigPicActivityTwo;
 import cn.com.nggirl.ngdemo.dagger.DaggerActivity;
 import cn.com.nggirl.ngdemo.databinding.DataBindingActivity;
+import cn.com.nggirl.ngdemo.fresco.FrescoViewBigPicActivity;
 import cn.com.nggirl.ngdemo.keyboard.KeyboardEventActivity;
 import cn.com.nggirl.ngdemo.launchmode.LaunchModeActivity;
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
@@ -79,6 +80,8 @@ public class MainActivity extends AppCompatActivity
     Button mBtnAdil;
     @BindView(R.id.btn_custom_view)
     Button mBtnCustomView;
+    @BindView(R.id.btn_fresco_big_pic)
+    Button mBtnFrescoBigPic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,9 +114,12 @@ public class MainActivity extends AppCompatActivity
             R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
             R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale,
             R.id.btn_view_retrofit, R.id.btn_view_data_binding, R.id.btn_view_dagger,
-            R.id.btn_view_dagger_mvp, R.id.btn_adil, R.id.btn_custom_view})
+            R.id.btn_view_dagger_mvp, R.id.btn_adil, R.id.btn_custom_view,R.id.btn_fresco_big_pic})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.btn_fresco_big_pic:
+                FrescoViewBigPicActivity.start(MainActivity.this);
+                break;
             case R.id.btn_view_keyboard:
                 KeyboardEventActivity.start(MainActivity.this);
                 break;

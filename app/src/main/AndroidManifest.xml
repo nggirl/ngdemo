@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".daggermvp.App"
+        android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".fresco.FrescoViewBigPicActivity"/>
         <activity
             android:name=".anim.ViewPropertyAnimationActivity"
             android:label="@string/app_name" />
