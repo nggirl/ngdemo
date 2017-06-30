@@ -119,6 +119,7 @@
         <activity android:name=".aidl.MessengerActivity"/>
         <activity android:name=".view.ScrollEventConflictActivity"/>
         <activity android:name=".keyboard.KeyboardEventActivity"/>
+        <activity android:name=".gallery.EasyGalleryActivity"/>
 
         <service android:name=".aidl.MessengerService"
             android:process=":remote"/>

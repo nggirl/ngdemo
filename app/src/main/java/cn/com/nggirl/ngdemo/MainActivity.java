@@ -15,6 +15,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -26,6 +29,7 @@ import cn.com.nggirl.ngdemo.bigpic.BigPicActivityTwo;
 import cn.com.nggirl.ngdemo.dagger.DaggerActivity;
 import cn.com.nggirl.ngdemo.databinding.DataBindingActivity;
 import cn.com.nggirl.ngdemo.fresco.FrescoViewBigPicActivity;
+import cn.com.nggirl.ngdemo.gallery.EasyGalleryActivity;
 import cn.com.nggirl.ngdemo.keyboard.KeyboardEventActivity;
 import cn.com.nggirl.ngdemo.launchmode.LaunchModeActivity;
 import cn.com.nggirl.ngdemo.pullzoom.PullZoomRecyclerViewActivity;
@@ -40,6 +44,8 @@ public class MainActivity extends AppCompatActivity
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.btn_gallery)
+    Button btnViewGallery;
     @BindView(R.id.btn_view_keyboard)
     Button btnViewKeyboard;
     @BindView(R.id.btn_view_anim)
@@ -110,13 +116,23 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    @OnClick({R.id.btn_view_keyboard, R.id.btn_view_anim, R.id.btn_pull_zoom, R.id.btn_titlebar_gradient,
+    @OnClick({R.id.btn_gallery,R.id.btn_view_keyboard, R.id.btn_view_anim, R.id.btn_pull_zoom, R.id.btn_titlebar_gradient,
             R.id.btn_zoom_view_transition, R.id.btn_zoom_view_transition2, R.id.btn_view_big_pic,
             R.id.btn_view_big_pic2, R.id.btn_view_launch_mode, R.id.btn_view_banner_pic_scale,
             R.id.btn_view_retrofit, R.id.btn_view_data_binding, R.id.btn_view_dagger,
             R.id.btn_view_dagger_mvp, R.id.btn_adil, R.id.btn_custom_view,R.id.btn_fresco_big_pic})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.btn_gallery:
+                List<String> list = new ArrayList<>();
+                list.add("http://tupian.enterdesk.com/2013/mxy/12/28/1/3.jpg");
+                list.add("http://tupian.enterdesk.com/2013/mxy/12/28/1/3.jpg");
+                list.add("http://tupian.enterdesk.com/2013/mxy/12/28/1/3.jpg");
+                list.add("http://tupian.enterdesk.com/2013/mxy/12/28/1/3.jpg");
+                list.add("http://tupian.enterdesk.com/2013/mxy/12/28/1/3.jpg");
+                list.add("http://tupian.enterdesk.com/2013/mxy/12/28/1/3.jpg");
+                EasyGalleryActivity.start(MainActivity.this,0,list);
+                break;
             case R.id.btn_fresco_big_pic:
                 FrescoViewBigPicActivity.start(MainActivity.this);
                 break;

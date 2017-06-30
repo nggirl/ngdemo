@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <me.relex.photodraweeview.PhotoDraweeView
+        android:id="@+id/iv_gallery_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="300"
+        fresco:failureImage="@drawable/works_list_default_img"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/works_list_default_img"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:retryImage="@drawable/works_list_default_img"
+        fresco:retryImageScaleType="centerInside"
+        />
+
+    <RelativeLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+</FrameLayout>

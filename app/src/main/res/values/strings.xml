@@ -6,6 +6,7 @@
 
     <string name="action_settings">Settings</string>
 
+    <string name="btn_gallery">Gallery</string>
     <string name="btn_fresco_big_pic">Fresco加载大图</string>
     <string name="btn_view_keyboard_event">键盘事件</string>
     <string name="btn_view_anim">自定义动画</string>
@@ -66,4 +67,12 @@
     <string name="no_data">No data</string>
     <string name="no_data_description"/>
 
+    <!-- gallery -->
+    <string name="gallery_photo_list_error">照片无法查看</string>
+    <string name="gallery_index_out_of_bound">相册数据格式错误</string>
+    <string name="gallery_save_success">保存成功</string>
+    <string name="gallery_save_failed">保存文件失败</string>
+    <string name="gallery_save_photo">保存图片</string>
+    <string name="gallery_load_error">资源加载异常</string>
+    <string name="cancel">取消</string>
 </resources>
